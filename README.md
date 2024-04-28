@@ -1,6 +1,6 @@
-# streetvendors_admin_web_portal
+# Streetvendors_admin_web_portal
 
-This is street Vendors admin web portal for the application street vendors made in flutter.
+This is Street Vendors admin web portal for the application street vendors made in flutter.
 This is for admins who have the control over all of the data of the entire application.
 The admins can make certain changes wherever needed.
 It is currently for the users of the street vendors application, such that the admins can :
