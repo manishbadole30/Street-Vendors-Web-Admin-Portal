@@ -1,7 +1,12 @@
 import 'dart:async';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:streetvendors_admin_web_portal/authentication/login_screen.dart';
+import 'package:streetvendors_admin_web_portal/users/all_blocked_users_screen.dart';
+
+import '../users/all_verified_users_screen.dart';
 
 class HomeScreen extends StatefulWidget
 {
@@ -80,9 +85,9 @@ class _HomeScreenState extends State<HomeScreen>
           ),
         ),
         title: const Text(
-          "Admin Web Portal",
+          "Street Vendors Admin Web Portal",
           style: TextStyle(
-            fontSize: 20,
+            fontSize: 25,
             letterSpacing: 3,
             color: Colors.white,
           ),
@@ -114,9 +119,9 @@ class _HomeScreenState extends State<HomeScreen>
                 ElevatedButton.icon(
                   icon: const Icon(Icons.person_add, color: Colors.white,),
                   label: Text(
-                    "${"Activate Users".toUpperCase()}\n${r"Accounts".toUpperCase()}",
+                    "${"All Verified Users".toUpperCase()}\n${r"Accounts".toUpperCase()}",
                     style: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 20,
                       color: Colors.white,
                       letterSpacing: 3,
                     ),
@@ -127,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen>
                   ),
                   onPressed: ()
                   {
-
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (c) => const AllVerifiedUsersScreen()));
                   },
                 ),
 
@@ -137,9 +142,9 @@ class _HomeScreenState extends State<HomeScreen>
                 ElevatedButton.icon(
                   icon: const Icon(Icons.block_flipped, color: Colors.white,),
                   label: Text(
-                    "${"Block Users".toUpperCase()}\n${"Accounts".toUpperCase()}",
+                    "${"All Blocked Users".toUpperCase()}\n${"Accounts".toUpperCase()}",
                     style: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 20,
                       color: Colors.white,
                       letterSpacing: 3,
                     ),
@@ -150,111 +155,111 @@ class _HomeScreenState extends State<HomeScreen>
                   ),
                   onPressed: ()
                   {
-
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (c) => const AllBlockedUsersScreen()));
                   },
                 ),
               ],
             ),
 
-            //sellers activate and block accounts button ui
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                //active
-                ElevatedButton.icon(
-                  icon: const Icon(Icons.person_add, color: Colors.white,),
-                  label: Text(
-                    "${"Activate Sellers".toUpperCase()}\n${r"Accounts".toUpperCase()}",
-                    style: const TextStyle(
-                      fontSize: 16,
-                      color: Colors.white,
-                      letterSpacing: 3,
-                    ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(40),
-                    backgroundColor: Colors.cyan,
-                  ),
-                  onPressed: ()
-                  {
-
-                  },
-                ),
-
-                const SizedBox(width: 20,),
-
-                //block
-                ElevatedButton.icon(
-                  icon: const Icon(Icons.block_flipped, color: Colors.white,),
-                  label: Text(
-                    "${"Block Sellers".toUpperCase()}\n${"Accounts".toUpperCase()}",
-                    style: const TextStyle(
-                      fontSize: 16,
-                      color: Colors.white,
-                      letterSpacing: 3,
-                    ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(40),
-                    backgroundColor: Colors.amber,
-                  ),
-                  onPressed: ()
-                  {
-
-                  },
-                ),
-              ],
-            ),
-
-            //riders activate and block accounts ui
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                //active
-                ElevatedButton.icon(
-                  icon: const Icon(Icons.person_add, color: Colors.white,),
-                  label: Text(
-                    "${"Activate Riders".toUpperCase()}\n${r"Accounts".toUpperCase()}",
-                    style: const TextStyle(
-                      fontSize: 16,
-                      color: Colors.white,
-                      letterSpacing: 3,
-                    ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(40),
-                    backgroundColor: Colors.amber,
-                  ),
-                  onPressed: ()
-                  {
-
-                  },
-                ),
-
-                const SizedBox(width: 20,),
-
-                //block
-                ElevatedButton.icon(
-                  icon: const Icon(Icons.block_flipped, color: Colors.white,),
-                  label: Text(
-                    "${"Block Riders".toUpperCase()}\n${"Accounts".toUpperCase()}",
-                    style: const TextStyle(
-                      fontSize: 16,
-                      color: Colors.white,
-                      letterSpacing: 3,
-                    ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(40),
-                    backgroundColor: Colors.cyan,
-                  ),
-                  onPressed: ()
-                  {
-
-                  },
-                ),
-              ],
-            ),
+            // //sellers activate and block accounts button ui
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [
+            //     //active
+            //     ElevatedButton.icon(
+            //       icon: const Icon(Icons.person_add, color: Colors.white,),
+            //       label: Text(
+            //         "${"All Verified Sellers".toUpperCase()}\n${r"Accounts".toUpperCase()}",
+            //         style: const TextStyle(
+            //           fontSize: 16,
+            //           color: Colors.white,
+            //           letterSpacing: 3,
+            //         ),
+            //       ),
+            //       style: ElevatedButton.styleFrom(
+            //         padding: const EdgeInsets.all(40),
+            //         backgroundColor: Colors.cyan,
+            //       ),
+            //       onPressed: ()
+            //       {
+            //
+            //       },
+            //     ),
+            //
+            //     const SizedBox(width: 20,),
+            //
+            //     //block
+            //     ElevatedButton.icon(
+            //       icon: const Icon(Icons.block_flipped, color: Colors.white,),
+            //       label: Text(
+            //         "${"All Blocked Sellers".toUpperCase()}\n${"Accounts".toUpperCase()}",
+            //         style: const TextStyle(
+            //           fontSize: 16,
+            //           color: Colors.white,
+            //           letterSpacing: 3,
+            //         ),
+            //       ),
+            //       style: ElevatedButton.styleFrom(
+            //         padding: const EdgeInsets.all(40),
+            //         backgroundColor: Colors.amber,
+            //       ),
+            //       onPressed: ()
+            //       {
+            //
+            //       },
+            //     ),
+            //   ],
+            // ),
+            //
+            // //riders activate and block accounts ui
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [
+            //     //active
+            //     ElevatedButton.icon(
+            //       icon: const Icon(Icons.person_add, color: Colors.white,),
+            //       label: Text(
+            //         "${"All Verified Riders".toUpperCase()}\n${r"Accounts".toUpperCase()}",
+            //         style: const TextStyle(
+            //           fontSize: 16,
+            //           color: Colors.white,
+            //           letterSpacing: 3,
+            //         ),
+            //       ),
+            //       style: ElevatedButton.styleFrom(
+            //         padding: const EdgeInsets.all(40),
+            //         backgroundColor: Colors.amber,
+            //       ),
+            //       onPressed: ()
+            //       {
+            //
+            //       },
+            //     ),
+            //
+            //     const SizedBox(width: 20,),
+            //
+            //     //block
+            //     ElevatedButton.icon(
+            //       icon: const Icon(Icons.block_flipped, color: Colors.white,),
+            //       label: Text(
+            //         "${"All Blocked Riders".toUpperCase()}\n${"Accounts".toUpperCase()}",
+            //         style: const TextStyle(
+            //           fontSize: 16,
+            //           color: Colors.white,
+            //           letterSpacing: 3,
+            //         ),
+            //       ),
+            //       style: ElevatedButton.styleFrom(
+            //         padding: const EdgeInsets.all(40),
+            //         backgroundColor: Colors.cyan,
+            //       ),
+            //       onPressed: ()
+            //       {
+            //
+            //       },
+            //     ),
+            //   ],
+            // ),
 
             //logout button
             ElevatedButton.icon(
@@ -273,7 +278,8 @@ class _HomeScreenState extends State<HomeScreen>
               ),
               onPressed: ()
               {
-
+                FirebaseAuth.instance.signOut();
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (c) => const LoginScreen( )));
               },
             ),
 

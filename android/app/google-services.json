@@ -1,0 +1,97 @@
+{
+  "project_info": {
+    "project_number": "488945725454",
+    "project_id": "streetvendors-app",
+    "storage_bucket": "streetvendors-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488945725454:android:9cc7255059e8fee14c0c5f",
+        "android_client_info": {
+          "package_name": "com.example.location_street_vendors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488945725454-b478ad0uktnv7nmov3edntcod19dfbmc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnTPMibo1CqEASe0YspLJo73jAInCXPnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488945725454-b478ad0uktnv7nmov3edntcod19dfbmc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488945725454:android:4350b241e0e490074c0c5f",
+        "android_client_info": {
+          "package_name": "com.example.street_vendors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488945725454-b478ad0uktnv7nmov3edntcod19dfbmc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnTPMibo1CqEASe0YspLJo73jAInCXPnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488945725454-b478ad0uktnv7nmov3edntcod19dfbmc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488945725454:android:ffeac420ff82bbab4c0c5f",
+        "android_client_info": {
+          "package_name": "com.example.streetvendors_admin_web_portal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488945725454-b478ad0uktnv7nmov3edntcod19dfbmc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnTPMibo1CqEASe0YspLJo73jAInCXPnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488945725454-b478ad0uktnv7nmov3edntcod19dfbmc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

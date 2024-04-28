@@ -22,11 +22,11 @@ class _LoginScreenState extends State<LoginScreen>
       content: Text(
         "Checking Credentials, Please wait...",
         style: TextStyle(
-          fontSize: 36,
+          fontSize: 30,
           color: Colors.black,
         ),
       ),
-      backgroundColor: Colors.pinkAccent,
+      backgroundColor: Colors.cyan,
       duration: Duration(seconds: 6,),
     );
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
@@ -49,11 +49,11 @@ class _LoginScreenState extends State<LoginScreen>
         content: Text(
           "Error Occurred: $onError",
           style: const TextStyle(
-            fontSize: 36,
+            fontSize: 30,
             color: Colors.black,
           ),
         ),
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.cyan,
         duration: const Duration(seconds: 5,),
       );
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
@@ -68,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen>
         {
              if(snap.exists)
                {
-                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (c) => const HomeScreen()));
+                 Navigator.push(context, MaterialPageRoute(builder: (c) => const HomeScreen()));
                }
              else
                {
@@ -76,11 +76,11 @@ class _LoginScreenState extends State<LoginScreen>
                    content: Text(
                      "No record found, you are not an admin.",
                      style: TextStyle(
-                       fontSize: 36,
+                       fontSize: 30,
                        color: Colors.black,
                      ),
                    ),
-                   backgroundColor: Colors.pinkAccent,
+                   backgroundColor: Colors.cyan,
                    duration: Duration(seconds: 6,),
                  );
                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
